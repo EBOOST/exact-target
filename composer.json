@@ -1,0 +1,23 @@
+{
+    "name": "eboost/exact-target",
+    "description": "Package to send an email to a data extention in salesforce using the ExactTarget SOAP api",
+    "keywords" : ["exacttarget", "email", "api", "soap", "salesforce", "data extension"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/eboost/exact-target",
+    "authors": [
+        {
+            "name": "Bert van Hoekelen",
+            "email": "bert@eboost.co"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "druid628/et-wsse": "1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eboost\\ExactTarget\\": "src/"
+        }
+    }
+}
