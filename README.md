@@ -24,7 +24,10 @@ $customerKey = 'some_random_key';
 $htmlBody = '<b>This email was sent by %%Member_Busname%%  %%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%</b>';
 
 $client = new ExactTargetClient($username, $password, $instance);
-$client->makeAndCreateEmail($customerKey, 'Subject of the email', $htmlBody);
+
+$result = $client->makeAndCreateEmail($customerKey, 'Subject of the email', $htmlBody);
+$emailId = $result->Results->NewID;
+
 $client->setEmailDefinition($customerKey, $externalKey, $emailId);
 $client->sendEmail($customerKey);
 ```
